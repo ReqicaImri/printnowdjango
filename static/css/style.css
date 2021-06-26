@@ -1,0 +1,743 @@
+        @font-face {
+            font-family: 'Samsung Sharp Sans Bold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Samsung Sharp Sans Bold'), url('/static/fonts/samsungsharpsans-bold.woff') format("woff");
+        }
+        
+        @font-face {
+            font-family: 'Samsung Sharp Sans Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Samsung Sharp Sans Regular'), url('/static/fonts/samsungsharpsans.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'Samsung Sharp Sans Medium';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Samsung Sharp Sans Medium'), url('/static/fonts/samsungsharpsans-medium.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'SharpSansNo1 Extrabold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('SharpSansNo1 Extrabold'), url('/static/fonts/SharpSansNo1-Extrabold.ttf') format("truetype");
+        }
+        
+        body,
+        html {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            font-family: 'Samsung Sharp Sans Medium';
+            overflow-x: hidden;
+        }
+        
+        h1,
+        h2,
+        h4 {
+            font-family: 'Samsung Sharp Sans Bold';
+        }
+        
+        h2 {
+            font-size: 40px;
+        }
+        
+        p {
+            font-family: 'Samsung Sharp Sans Regular';
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .logo {
+            width: 350px;
+            height: 40px;
+            padding-top: 5px;
+            padding-left: 40px;
+        }
+        
+        .navbar {
+            width: 100%;
+            height: 70px;
+            background-color: #FAC32D;
+        }
+        
+        .navbar-dark .navbar-toggler {
+            color: rgba(6 6 6) !important;
+            border-color: rgba(12 12 12)!important;
+        }
+        
+        .navbar-nav .nav-link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Samsung Sharp Sans Bold';
+            font-size: 10px;
+            font-weight: bold;
+            margin-left: 25px;
+            margin-top: 10px;
+            color: #000 !important;
+        }
+        
+        .bottom-slider {
+            position: absolute;
+            height: 4px;
+            margin-top: 40px;
+            background: #000;
+            transition: left 0.5s ease;
+        }
+        
+        .social-icon {
+            width: 11px;
+            height: 15px;
+            margin-left: 5px;
+            position: relative;
+            margin-top: 18px;
+        }
+        
+        .home {
+            width: 100%;
+            height: 100vh !important;
+            background: url("/static/images/circle1.png") 8% 125% no-repeat, url("/static/images/circle2.png") 105% 25% no-repeat;
+            background-color: #FAC32D;
+            background-size: 250px, 170px;
+        }
+        
+        .home h1 {
+            text-align: center;
+            padding-top: 22%;
+            font-size: 35px;
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .home .cursor::after {
+            content: '';
+            display: inline-block;
+            margin-left: 3px;
+            background-color: black;
+            animation-name: blink;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+        }
+        
+        .home h1.cursor::after {
+            height: 30px;
+            width: 2px;
+        }
+        
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            49% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        .aboutus {
+            background-image: url("/static/images/whatwedobackground.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .about {
+            width: 100%;
+            height: 90vh;
+            background: url("/static/images/circle3.png") -9% 130% no-repeat, url("/static/images/aboutusleft.svg") 10% 0% no-repeat, url("/static/images/aboutusright.svg") right 20% no-repeat;
+            background-size: 280px, 140px, 210px;
+        }
+        
+        .aboutus h2 {
+            font-size: 35px;
+            padding-top: 50px;
+            color: #000;
+        }
+        
+        .about p {
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1px;
+            line-height: 200%;
+        }
+        
+        .middle {
+            position: absolute;
+            width: 100%;
+            transform: translateY(71%);
+            margin-top: 70px;
+        }
+        
+        .counting-sec {
+            position: absolute;
+            width: 100%;
+            height: 105px;
+            background: #000;
+            align-items: center;
+        }
+        
+        .inner-width {
+            position: relative;
+            width: 100%;
+            display: flex;
+        }
+        
+        .col {
+            color: #FAC32D;
+            font-family: 'SharpSansNo1 Extrabold';
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .col p {
+            font-size: 15px;
+            font-weight: normal;
+            color: #fff;
+            align-items: center;
+            float: left;
+            margin-top: 23px;
+        }
+        
+        .col span {
+            margin: auto;
+            float: left;
+            color: #FAC32D;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 6%;
+        }
+        
+        .num {
+            font-family: 'SharpSansNo1 Extrabold';
+            font-size: 50px;
+            font-weight: bold;
+            margin: 14px 5px;
+            margin-left: -11px;
+            float: left;
+            align-items: center;
+        }
+        
+        .portfolio {
+            width: 100%;
+            height: 60vh;
+            background: url("/static/images/portfoliobck.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .portfolio h2 {
+            font-size: 35px;
+            padding-top: 50px;
+            color: #000;
+        }
+        
+        .swiper-wrapper {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .swiper-wrapper img {
+            width: 100%;
+            height: 100%;
+            align-items: center;
+        }
+        
+        .clients {
+            width: 100%;
+            height: 50vh;
+            background: url("/static/images/portfoliobck.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .clients h5 {
+            margin-top: 65px;
+            font-weight: 600;
+            color: #000 !important;
+        }
+        
+        .clients .slick-slider {
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+        }
+        
+        .clients .slick-list {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .clients .slick-track {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+        
+        .clients .slick-slide {
+            display: none;
+            float: left;
+            height: 100%;
+            min-height: 1px;
+        }
+        
+        .clients .slick-slide img {
+            display: block;
+            width: 90px;
+            height: 90px;
+            letter-spacing: 5px;
+        }
+        
+        .clients .slick-initialized .slick-slide {
+            display: block;
+        }
+        
+        .whatwedo {
+            width: 100%;
+            height: 100vh;
+            background-image: url("/static/images/whatwedobackground.png");
+            background-size: cover;
+            background-repeat: repeat;
+        }
+        
+        .what-icons h2 {
+            font-size: 35px;
+            padding-top: 50px;
+            color: #000;
+        }
+        
+        .what-icons h4 {
+            font-weight: bold;
+            font-size: 20px;
+            padding-top: 40px;
+            color: #000;
+        }
+        
+        .what-icons p {
+            font-family: 'Samsung Sharp Sans Bold';
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .what-icons {
+            width: 100%;
+            height: 100vh;
+            background: url("/static/images/aboutusleft.svg") right 0% no-repeat;
+            background-size: 165px;
+        }
+        
+        .what-icons img {
+            float: left;
+            width: 65px;
+            padding-top: 40px;
+            padding-right: 10px;
+        }
+        
+        #vehicle {
+            width: 80px;
+            padding-top: 55px;
+            margin-left: -10px;
+        }
+        
+        #textile {
+            width: 70px;
+        }
+        
+        .getintouch {
+            width: 100%;
+            height: 100vh;
+            background: url("/static/images/whatsbackground.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .getintouch h2 {
+            font-size: 35px;
+            padding-top: 50px;
+            color: #000;
+        }
+        
+        .whatsnextt {
+            height: 50vh;
+        }
+        
+        .whatsnext {
+            width: 100%;
+            height: 14em;
+            background: url("/static/images/circle5.png") -1% 900% no-repeat, url("/static/images/circle4.png") 105% -80% no-repeat;
+            background-size: 210px, 160px;
+            background-color: #000;
+            margin-top: 30px;
+            align-items: center;
+        }
+        
+        .whatsnext h1 {
+            color: #fff;
+            font-size: 60px;
+            padding-top: 60px;
+        }
+        
+        .whatsnext p {
+            color: #E3B020;
+            font-size: 15px;
+        }
+        
+        .get-icons {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .get-links {
+            padding-top: 30px;
+        }
+        
+        .get-p {
+            color: #000;
+            font-size: 12px;
+            font-weight: 200;
+            font-family: 'Samsung Sharp Sans Bold';
+        }
+        
+        footer {
+            width: 100%;
+            background: #000;
+        }
+        
+        footer p {
+            color: #fff;
+            font-size: 10px;
+            padding-left: 25px;
+            padding-top: 25px;
+        }
+        
+        footer img {
+            width: 65px;
+            height: 65px;
+            float: right;
+            margin-right: 50px;
+        }
+        
+        .developed {
+            float: right;
+            margin-right: 10px;
+        }
+        
+        @media all and (min-width: 320px) and (max-width: 500px) {
+            .logo {
+                width: 260px;
+                height: 65px;
+            }
+            .navbar {
+                height: 80px;
+            }
+            .home h1 {
+                font-size: 24px;
+                padding-top: 90%;
+            }
+            .middle {
+                margin-top: 35%;
+                padding: 0;
+                left: 0;
+                right: 0;
+            }
+            .counting-sec {
+                width: 100%;
+                height: 120px;
+            }
+            .col p {
+                margin-top: -20px;
+                font-size: 13px;
+            }
+            .num {
+                font-size: 35px;
+                margin-left: 15px;
+            }
+            .col span {
+                display: none;
+            }
+            .portfolio h2 {
+                margin-top: 90px;
+            }
+            .swiper-container {
+                width: 255%;
+                height: 250%;
+                margin-top: -80px;
+            }
+            .swiper-wrapper img {
+                object-fit: contain;
+            }
+            .clients .slick-slide img {
+                width: 55px;
+                height: 55px;
+            }
+            .what-icons {
+                padding-top: 15px;
+            }
+            .what-icons img {
+                width: 60px;
+            }
+            #vehicle {
+                width: 90px;
+                height: 90px;
+                margin-left: -14px;
+            }
+            .what-icons h4 {
+                font-size: 20px;
+            }
+            .whatwedo p {
+                font-size: 14px;
+            }
+            .getintouch {
+                width: 100%;
+                margin-top: 530px;
+            }
+            .whatsnext {
+                width: 100%;
+                height: 150px;
+                background: url("/static/images/circle5.png") -1% 140% no-repeat, url("/static/images/circle4.png") 105% -10% no-repeat;
+                background-size: 100px, 60px;
+                background-color: #000;
+                margin-top: 20px;
+            }
+            .whatsnext h1 {
+                position: relative;
+                color: #fff;
+                font-size: 34px;
+            }
+            .whatsnext p {
+                font-size: 15px;
+            }
+            .get-p {
+                font-size: 13px;
+            }
+            footer p {
+                font-size: 14px;
+            }
+            footer img {
+                width: 90px;
+                margin-right: 100px;
+            }
+        }
+        
+        @media (min-width: 500px) and (max-width: 767px) {
+            .logo {
+                width: 400px;
+                height: 65px;
+            }
+            .navbar {
+                height: 85px;
+            }
+            .home h1 {
+                font-size: 30px;
+                padding-top: 60%;
+            }
+            .about {
+                width: 100%;
+                height: 100vh;
+                background: url("/static/images/circle3.png") -5% 80% no-repeat;
+                background-size: 280px;
+            }
+            .middle {
+                margin-top: 20%;
+            }
+            .counting-sec {
+                width: 100%;
+                height: 180px;
+            }
+            .col p {
+                margin-top: -16px;
+                font-size: 15px;
+                margin-left: -20px;
+            }
+            .num {
+                font-size: 40px;
+                margin-left: 25px;
+            }
+            .col span {
+                margin: auto;
+                float: left;
+                color: #FAC32D;
+                font-size: 40px;
+                font-weight: bold;
+                margin-top: 8%;
+                display: none;
+            }
+            .portfolio h2 {
+                margin-top: 90px;
+            }
+            .swiper-container {
+                width: 155%;
+                height: 200%;
+                margin-top: -50px;
+            }
+            .swiper-wrapper img {
+                object-fit: contain;
+            }
+            .clients .slick-slide img {
+                width: 55px;
+                height: 55px;
+            }
+            .what-icons {
+                padding-top: 15px;
+            }
+            .what-icons img {
+                width: 70px;
+            }
+            #vehicle {
+                width: 90px;
+                height: 96px;
+                margin-left: -14px;
+            }
+            .what-icons h4 {
+                font-size: 20px;
+            }
+            .whatwedo p {
+                font-size: 12px;
+            }
+            .getintouch {
+                width: 100%;
+                margin-top: 480px;
+            }
+            .whatsnext {
+                width: 100%;
+                height: 150px;
+                background: url("/static/images/circle5.png") -1% 140% no-repeat, url("/static/images/circle4.png") 105% -10% no-repeat;
+                background-size: 100px, 60px;
+                background-color: #000;
+                margin-top: 20px;
+            }
+            .whatsnext h1 {
+                position: relative;
+                color: #fff;
+                font-size: 34px;
+            }
+            .whatsnext p {
+                font-size: 15px;
+            }
+            .get-p {
+                font-size: 13px;
+            }
+            footer p {
+                font-size: 14px;
+            }
+            footer img {
+                width: 90px;
+                margin-right: 100px;
+            }
+        }
+        
+        @media (min-width: 573px) and (max-width: 770px) {
+            .whatwedo {
+                width: 100%;
+                height: 60vh;
+            }
+            .getintouch {
+                width: 100%;
+                height: 60vh;
+            }
+        }
+        
+        @media (min-width: 767px) and (max-width: 900px) {
+            .home h1 {
+                font-size: 35px;
+                padding-top: 50%;
+            }
+            .about {
+                width: 100%;
+                height: 100vh;
+                background: url("/static/images/circle3.png") -5% 80% no-repeat, url("/static/images/aboutusleft.svg") 10% 0% no-repeat, url("/static/images/aboutusright.svg") right 20% no-repeat;
+                background-size: 280px, 140px, 210px;
+            }
+            .middle {
+                position: absolute;
+                width: 100%;
+                transform: translateY(71%);
+                margin-top: 120px;
+            }
+            .counting-sec {
+                position: absolute;
+                width: 100%;
+                height: 220px;
+                background: #000;
+                align-items: center;
+            }
+            .col p {
+                font-size: 22px;
+                margin-top: -10px;
+            }
+            .col span {
+                margin: auto;
+                float: left;
+                color: #FAC32D;
+                font-size: 75px;
+                font-weight: bold;
+                margin-top: 5%;
+            }
+            .num {
+                font-family: 'SharpSansNo1 Extrabold';
+                font-size: 65px;
+            }
+        }
+        
+        @media (min-width: 900px) and (max-width: 980px) {
+            .home h1 {
+                font-size: 35px;
+                padding-top: 40%;
+            }
+            .about {
+                width: 100%;
+                height: 100vh;
+                background: url("/static/images/circle3.png") -5% 80% no-repeat, url("/static/images/aboutusleft.svg") 10% 0% no-repeat, url("/static/images/aboutusright.svg") right 20% no-repeat;
+                background-size: 280px, 140px, 210px;
+            }
+            .middle {
+                position: absolute;
+                width: 100%;
+                transform: translateY(71%);
+                margin-top: 120px;
+            }
+            .counting-sec {
+                position: absolute;
+                width: 100%;
+                height: 290px;
+                background: #000;
+                align-items: center;
+            }
+            .col p {
+                font-size: 22px;
+                margin-top: -10px;
+            }
+            .col span {
+                margin: auto;
+                float: left;
+                color: #FAC32D;
+                font-size: 75px;
+                font-weight: bold;
+                margin-top: 5%;
+            }
+            .num {
+                font-family: 'SharpSansNo1 Extrabold';
+                font-size: 65px;
+            }
+        }
