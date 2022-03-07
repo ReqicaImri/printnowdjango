@@ -30,11 +30,11 @@ class StickyNavigation {
     }
 
     checkTabContainerPosition() {
-        let offset = $('.navbar').offset().top + $('.navbar').height() - this.tabContainerHeight;
+        let offset = $('.nav-link').offset().top + $('.nav-link').height() - this.tabContainerHeight;
         if ($(window).scrollTop() > offset) {
-            $('.navbar-nav').addClass('navbar-nav--top');
+            $('.nav-link').addClass('nav-link--top');
         } else {
-            $('.navbar-nav').removeClass('navbar-nav--top');
+            $('.nav-link').removeClass('nav-link--top');
         }
     }
 

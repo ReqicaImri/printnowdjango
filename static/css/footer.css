@@ -1,0 +1,23 @@
+footer {
+  width: 100%;
+  background: #000;
+}
+
+footer p {
+  color: #fff;
+  font-size: 10px;
+  padding-left: 25px;
+  padding-top: 25px;
+}
+
+footer img {
+  width: 65px;
+  height: 65px;
+  float: right;
+  margin-right: 50px;
+}
+
+.developed {
+  float: right;
+  margin-right: 10px;
+}

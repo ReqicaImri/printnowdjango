@@ -1,0 +1,163 @@
+.aboutus {
+  background-image: url("/static/images/whatwedobackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+  background: url("/static/images/circle3.png") -4% 109% no-repeat,
+    url("/static/images/aboutusleft.svg") 10% 0% no-repeat,
+    url("/static/images/aboutusright.svg") right 20% no-repeat;
+  background-size: 380px, 140px, 210px;
+}
+
+.aboutus h2 {
+  font-size: 35px;
+  padding-top: 70px;
+  color: #000;
+}
+
+.about p {
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 200%;
+}
+
+.middle {
+  position: relative;
+  width: 100%;
+}
+
+.counting-sec {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  background: #000;
+  align-items: center;
+  transform: translateY(50%);
+  margin-top: 15px;
+}
+
+.inner-width {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.col {
+  color: #fac32d;
+  font-family: "SharpSansNo1 Extrabold";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.col p {
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  align-items: center;
+  float: left;
+  margin-top: 35px;
+}
+
+.col span {
+  margin: auto;
+  float: left;
+  color: #fac32d;
+  font-size: 80px;
+  font-weight: bold;
+  margin-top: 4%;
+}
+.num {
+  font-family: "SharpSansNo1 Extrabold";
+  font-size: 80px;
+  font-weight: bold;
+  margin: 14px 5px;
+  margin-left: -11px;
+  float: left;
+  align-items: center;
+}
+
+@media all and (min-width: 320px) and (max-width: 500px) {
+  .about p {
+    color: #000;
+    font-size: 15px;
+  }
+  .middle {
+    margin-top: -25%;
+    padding: 0;
+    left: 0;
+    right: 0;
+  }
+  .counting-sec {
+    width: 100%;
+    height: 150px;
+  }
+  .col p {
+    margin-top: -20px;
+    font-size: 13px;
+    color: #fff;
+  }
+  .num {
+    font-size: 35px;
+    margin-left: 15px;
+  }
+  .col span {
+    display: none;
+  }
+}
+
+@media (min-width: 490px) and (max-width: 900px) {
+  .about p {
+    font-size: 15px;
+  }
+  .middle {
+    margin-top: 5%;
+    padding: 0;
+    left: 0;
+    right: 0;
+  }
+  .counting-sec {
+    height: 190px;
+  }
+  .col p {
+    margin-top: -20px;
+    font-size: 16px;
+  }
+  .num {
+    font-size: 55px;
+    margin-left: 15px;
+  }
+  .col span {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .about p {
+    font-size: 19px;
+  }
+  .middle {
+    margin-top: -20%;
+  }
+  .counting-sec {
+    height: 230px;
+  }
+  .col p {
+    font-size: 22px;
+    margin-top: -10px;
+  }
+  .col span {
+    margin: auto;
+    font-size: 75px;
+    margin-top: 5%;
+  }
+  .num {
+    font-size: 70px;
+  }
+}
