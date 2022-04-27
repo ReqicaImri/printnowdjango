@@ -5,7 +5,7 @@ class StickyNavigation {
         this.currentTab = null;
         this.tabContainerHeight = 30;
         let self = this;
-        $('.nav-link').click(function() {
+        $('.nav-links').click(function() {
             self.onTabClick(event, $(this));
         });
         $(window).scroll(() => { this.onScroll(); });
@@ -30,11 +30,11 @@ class StickyNavigation {
     }
 
     checkTabContainerPosition() {
-        let offset = $('.nav-link').offset().top + $('.nav-link').height() - this.tabContainerHeight;
+        let offset = $('.links').offset().top + $('.links').height() - this.tabContainerHeight;
         if ($(window).scrollTop() > offset) {
-            $('.nav-link').addClass('nav-link--top');
+            $('.links').addClass('links--top');
         } else {
-            $('.nav-link').removeClass('nav-link--top');
+            $('.links').removeClass('links--top');
         }
     }
 
@@ -42,7 +42,7 @@ class StickyNavigation {
         let newCurrentId;
         let newCurrentTab;
         let self = this;
-        $('.nav-link').each(function() {
+        $('.nav-links').each(function() {
             let id = $(this).attr('href');
             let offsetTop = $(id).offset().top - self.tabContainerHeight;
             let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;

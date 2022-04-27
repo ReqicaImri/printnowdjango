@@ -1,1 +1,0 @@
-web: gunicorn printnow.wsgi

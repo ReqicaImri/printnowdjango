@@ -6,8 +6,12 @@
   background-color: #fac32d;
   background-size: 390px, 250px;
 }
+:root {
+  --animate-duration: 4s;
+}
 
-.home h1 {
+
+.home-box {
   text-align: center;
   padding-top: 20%;
   font-size: 45px;
@@ -15,58 +19,20 @@
   font-weight: bold;
 }
 
-.home .cursor::after {
-  content: "";
-  margin-left: 3px;
-  background-color: black;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-}
-
-.home h1.cursor::after {
-  height: 30px;
-  width: 2px;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.social-icon {
-  display: grid;
-  padding: 5px;
-  padding-top: 20%;
-  z-index: 2;
-}
-.social-icon img {
-  width: 18px;
-  height: 18px;
-  position: relative;
-  color: #000;
-  justify-content: space-between;
-  margin: 5px;
-}
-@media all and (min-width: 320px) and (max-width: 500px) {
+@media all and (min-width: 300px) and (max-width: 500px) {
   .home {
-    background-size: 310px, 150px;
+    background-size: 200px, 150px;
   }
-  .home h1 {
-    padding-top: 80%;
-    font-size: 28px;
+
+  .home-box h1{
+    padding-top: 90%;
+    font-size: 23px;
   }
-  .social-icon {
+
+}
+@media all and (min-width: 320px) and (max-height: 740px) {
+  .home-box h1{
     padding-top: 70%;
+    font-size: 21px;
   }
 }
